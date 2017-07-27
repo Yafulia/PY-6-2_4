@@ -6,6 +6,9 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 def def_files_with_string(files):
+	print('Введите строку:', end=' ')
+	s = input()
+	
 	sql_files_true = []
 	
 	for sql_file in files:
@@ -24,9 +27,6 @@ if __name__ == '__main__':
 	sql_files = [file for file in all_files if file.split('.')[-1] == 'sql']
 	
 	while True:
-		print('Введите строку:', end=' ')
-		s = input()
-		
 		files_to_print = def_files_with_string(sql_files)
 					
 		for file_to_print in files_to_print:
